@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${miriam_libre.className}`}>
+      <body className={`${inter.className} ${miriam_libre.variable}`}>
         {children}
       </body>
     </html>

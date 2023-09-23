@@ -8,7 +8,8 @@ export function Achievement({ className }: AchievementProps) {
     <div
       className={cn(
         "relative z-50 mx-10 flex flex-wrap items-center justify-between rounded-xl bg-blue-500 px-5 py-5 shadow-lg",
-        "max-sm:px-0max-md:px-8  max-md:pb-5 max-md:pt-8  max-sm:flex-col ",
+        "max-xxs:p-0 max-xxs:m-0  max-xxs:flex-col",
+        "max-md:px-8 max-md:pb-5 max-md:pt-8 max-sm:px-2 ",
         "md:w-[85%] md:flex-row md:flex-nowrap md:gap-1",
         "lg:px-10",
         className,

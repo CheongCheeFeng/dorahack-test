@@ -21,7 +21,7 @@ const config: Config = {
         "miriam-libre": "var(--font-miriam-libre)",
       },
       screens: {
-        sm: "640px",
+        xxs: "460px",
       },
     },
   },

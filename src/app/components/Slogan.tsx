@@ -1,16 +1,21 @@
 "use client";
-import Image from "next/image";
 import { Icons } from "../assets/icon";
 import { BlockchainIcon } from "./BlockchainIcon";
 import { cn } from "../utils";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 export function Slogon() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "0px 0px -130px 0px" });
+
   return (
-    <div className="relative -mt-24 flex w-full flex-col overflow-hidden bg-world bg-cover pt-24 md:-mt-12 md:block">
+    <div
+      ref={ref}
+      className="relative -mt-24  w-full overflow-hidden bg-world bg-cover px-5 pb-5 pt-28 md:-mt-12 md:px-10 md:pb-9 md:pt-20"
+    >
       <p
         className={cn(
-          "relative z-50  px-9 pt-6 text-[26px] font-[700] tracking-wide",
-          "md:w-full md:pb-9  md:pr-[45%] md:pt-16 ",
-          "lg:text-[28px] xl:pr-[52%]",
+          "relative z-50 text-[26px] font-[700] tracking-wide md:max-w-[46%]",
         )}
       >
         Build with the best ecosystems on{" "}
@@ -18,61 +23,35 @@ export function Slogon() {
           DoraHacks
         </span>
       </p>
-      <div className="relative mx-auto h-24 w-[432px] md:absolute md:left-[50%] md:top-[50%] md:w-full md:flex-1 md:self-end">
-        <BlockchainIcon
-          size="lg"
-          className={cn("left-24 top-0", "md:-top-14 md:left-[24rem]")}
-        >
-          <Icons.aptos />
-        </BlockchainIcon>
-        <BlockchainIcon
-          size="xlg"
-          className={cn(
-            "bottom-1 left-[12rem]",
-            "md:-bottom-2 md:left-[20rem]",
-          )}
-        >
-          <Icons.binance />
-        </BlockchainIcon>
-        <BlockchainIcon
-          size="default"
-          className={cn("bottom-2 left-72", "md:left-[30rem] md:top-0")}
-        >
-          <Icons.cosmos />
-        </BlockchainIcon>
-        <BlockchainIcon
-          size="default"
-          className={cn("-top-1 left-44", "md:left-[3.5rem] md:top-5")}
-        >
-          <Icons.ethereum />
-        </BlockchainIcon>
-        <BlockchainIcon
-          size="lg"
-          className={cn("left-10 top-6", "md:left-[10rem] md:top-[2rem]")}
-        >
-          <Icons.filecoin />
-        </BlockchainIcon>
-        <BlockchainIcon
-          size="md"
-          className={cn("left-36 top-7", "md:-top-16 md:left-[13rem]")}
-        >
-          <Icons.opensea />
-        </BlockchainIcon>
-        <BlockchainIcon
-          size="default"
-          className={cn("bottom-1.5 left-24", "md:bottom-7 md:left-[16rem]")}
-        >
-          <Icons.polygon />
-        </BlockchainIcon>
-        <BlockchainIcon
-          size="default"
-          className={cn(
-            "left-[15rem] top-7",
-            "md:-top-[2.5rem] md:left-[8rem]",
-          )}
-        >
-          <Icons.solana />
-        </BlockchainIcon>
+      <div className="h-20 translate-y-2 md:absolute md:bottom-0 md:left-1/2 md:w-1/2 md:-translate-y-5 md:translate-x-20 md:scale-150">
+        {isInView ? (
+          <>
+            <BlockchainIcon size="lg" x="10rem" y="0rem" delay={0.54}>
+              <Icons.aptos />
+            </BlockchainIcon>
+            <BlockchainIcon size="xlg" x="12rem" y="0rem" delay={0.37}>
+              <Icons.binance />
+            </BlockchainIcon>
+            <BlockchainIcon size="default" x="9.5rem" y="-2rem" delay={0.35}>
+              <Icons.cosmos />
+            </BlockchainIcon>
+            <BlockchainIcon size="default" x="15rem" y="-8rem" delay={0.12}>
+              <Icons.ethereum />
+            </BlockchainIcon>
+            <BlockchainIcon size="lg" x="19rem" y="-8rem" delay={0.3}>
+              <Icons.filecoin />
+            </BlockchainIcon>
+            <BlockchainIcon size="md" x="7rem" y="-10rem" delay={0.15}>
+              <Icons.opensea />
+            </BlockchainIcon>
+            <BlockchainIcon size="default" x="16rem" y="-11rem" delay={0.25}>
+              <Icons.polygon />
+            </BlockchainIcon>
+            <BlockchainIcon size="default" x="4rem" y="-14rem" delay={0.2}>
+              <Icons.solana />
+            </BlockchainIcon>
+          </>
+        ) : null}
       </div>
     </div>
   );
