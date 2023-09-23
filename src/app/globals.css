@@ -1,3 +1,5 @@
+@import url("https://fonts.google.com/specimen/Miriam+Libre");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,9 +8,18 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --gradient-unicorn: linear-gradient(
+      100deg,
+      #7f4ec7 11.46%,
+      #5594f1 42.58%,
+      #58de98 50%,
+      #5594f1 57.42%,
+      #7f4ec7 88.54%
+    )
+    100%/200% 100%;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -18,10 +29,10 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .gradient-unicorn {
+    background: var(--gradient-unicorn);
+  }
 }
