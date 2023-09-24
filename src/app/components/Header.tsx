@@ -1,6 +1,6 @@
 import React from "react";
-import { cn } from "../utils";
-import { Icons } from "../assets/icon";
+import { cn } from "../../utils/utils";
+import { Icons } from "../../utils/icon";
 import { navItems } from "../dummyData";
 
 export const Header = () => (

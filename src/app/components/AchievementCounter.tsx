@@ -1,7 +1,7 @@
 "use client";
 import { animate, useInView } from "framer-motion";
 import React, { RefObject, useEffect, useRef, useState } from "react";
-import { cn } from "../utils";
+import { cn } from "../../utils/utils";
 
 export function AchievementCounter({
   from,

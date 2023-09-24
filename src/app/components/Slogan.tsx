@@ -1,7 +1,7 @@
 "use client";
-import { Icons } from "../assets/icon";
+import { Icons } from "../../utils/icon";
 import { BlockchainIcon } from "./BlockchainIcon";
-import { cn } from "../utils";
+import { cn } from "../../utils/utils";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 export function Slogon() {

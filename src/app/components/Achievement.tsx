@@ -1,6 +1,6 @@
 "use client";
 import { useInView } from "framer-motion";
-import { cn } from "../utils";
+import { cn } from "../../utils/utils";
 import { useRef } from "react";
 import { AchievementCounter } from "./AchievementCounter";
 import { AchievementData } from "./AchievementData";

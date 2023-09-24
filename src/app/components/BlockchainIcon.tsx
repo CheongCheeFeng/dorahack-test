@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "../utils";
+import { cn } from "../../utils/utils";
 import { motion } from "framer-motion";
 
 const iconVariants = cva("border border-slate-200 bg-white", {
