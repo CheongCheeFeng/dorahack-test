@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Miriam_Libre } from "next/font/google";
+import { Header } from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 const miriam_libre = Miriam_Libre({
@@ -20,8 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={`${inter.className} ${miriam_libre.variable}`}>
+        <Header />
         {children}
       </body>
     </html>
