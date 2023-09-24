@@ -23,6 +23,10 @@ const config: Config = {
       screens: {
         xxs: "460px",
       },
+      colors: {
+        "primary-orange": "#ff761c",
+        green: "#2bad0a",
+      },
     },
   },
   plugins: [],
