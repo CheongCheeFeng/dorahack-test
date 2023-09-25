@@ -16,14 +16,18 @@ export function Achievement({ className }: AchievementProps) {
       ref={ref}
       className={cn(
         "relative z-50 mx-10 flex flex-wrap items-center justify-between overflow-hidden rounded-xl bg-white px-5 py-5 shadow-lg",
-        "max-xxs:p-0 max-xxs:m-0  max-xxs:flex-col",
+        "max-xxs:m-0 max-xxs:flex-col  max-xxs:p-0",
         "max-md:px-8 max-md:pb-5 max-md:pt-8 max-sm:px-2 ",
         "md:w-[85%] md:flex-row md:flex-nowrap ",
         "lg:px-10",
         className,
       )}
     >
-      <AchievementData title="Funded" isInView={isInView} duration={1500}>
+      <AchievementData
+        title="Funded"
+        isInView={isInView}
+        duration={"duration-[1500ms]"}
+      >
         <AchievementCounter
           from={0}
           to={29.33}
@@ -38,7 +42,7 @@ export function Achievement({ className }: AchievementProps) {
       <AchievementData
         title="Community Contributions"
         isInView={isInView}
-        duration={3000}
+        duration={"duration-[3000ms]"}
       >
         <AchievementCounter
           from={0}
@@ -51,7 +55,11 @@ export function Achievement({ className }: AchievementProps) {
 
       <hr className="hidden h-10 flex-[0_0_2px] rounded-full bg-[#e5e5e9]  md:block" />
 
-      <AchievementData title="BUIDLS" isInView={isInView} duration={4500}>
+      <AchievementData
+        title="BUIDLS"
+        isInView={isInView}
+        duration={"duration-[4500ms]"}
+      >
         <AchievementCounter
           from={0}
           to={7243}
@@ -66,7 +74,7 @@ export function Achievement({ className }: AchievementProps) {
       <AchievementData
         title="Active Builders"
         isInView={isInView}
-        duration={6000}
+        duration={"duration-[6000ms]"}
       >
         <AchievementCounter
           from={0}

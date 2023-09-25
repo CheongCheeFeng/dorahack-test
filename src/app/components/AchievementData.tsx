@@ -3,7 +3,7 @@ import { cn } from "../../utils/utils";
 
 type AchievementDataProps = {
   title: string;
-  duration: number;
+  duration: string;
   isInView?: boolean;
   children: React.ReactNode;
 };
@@ -19,9 +19,7 @@ export const AchievementData: FC<AchievementDataProps> = ({
       <p
         className={cn(
           "lg:text-lg",
-          isInView
-            ? `duration-[${duration}ms] translate-y-0`
-            : "translate-y-10",
+          isInView ? `${duration} translate-y-0` : "translate-y-10",
         )}
       >
         {title}
